@@ -1,0 +1,41 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+void sapXepTangDan(vector<int>& a) {
+    int n = a.size();
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (a[j] > a[j + 1]) {
+                swap(a[j], a[j + 1]);
+            }
+        }
+    }
+}
+
+int main() {
+    int n;
+    cout << "Nhap so luong phan tu N: ";
+    cin >> n;
+
+    vector<int> a(n);
+    cout << "Nhap phan tu cua mang: ... ";
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+    }
+
+    sapXepTangDan(a);
+
+    cout << "Mang sau khi sap xep tang dan: ";
+    for (int x : a) {
+        cout << x << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
+
+//do phuc tap thoi gian: O(n^2)
+//do phuc tap memory: O(n)
