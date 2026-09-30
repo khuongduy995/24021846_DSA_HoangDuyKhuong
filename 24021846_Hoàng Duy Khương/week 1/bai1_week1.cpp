@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-using namespace std;
+using namespace std; 
 
 long long tinhTong(const vector<int>& a) {
     long long tong = 0;
