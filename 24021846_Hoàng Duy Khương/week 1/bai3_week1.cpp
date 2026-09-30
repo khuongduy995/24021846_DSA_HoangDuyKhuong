@@ -24,3 +24,5 @@ int main(){
 	
 	return 0;
 }
+// Do phuc tap thuat toan: O(n)
+// Do phuc tap bo nho: O(1)
