@@ -31,3 +31,6 @@ int main() {
 
     return 0;
 }
+
+//Độ phức tạp thời gian: O(N)
+//Độ phức tạp bộ nhớ: O(N)
