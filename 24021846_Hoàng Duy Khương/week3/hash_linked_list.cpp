@@ -54,17 +54,24 @@ void display() { //O(n)
 }
 
 int main() {
-    insert(12);
-    insert(22);
-    insert(32);
-    insert(15);
-
+      int n,x;
+    cout << "Nhap so phan tu";
+    cin >> n;
+    
+    cout << "Nhap mang";
+    
+    for(int i = 0; i < n; i++){
+    	cin >> x;
+    	insert(x);
+	}
     display();
 
-    if (search(22))
-        cout << "Tim thay 22";
-    else
-        cout << "Khong tim thay 22";
-
+    cout << "Nhap so can tim";
+    cin >> x;
+    if(search(x)){
+    	cout << "Tim thay " << x;
+	} else {
+		cout << "Khong tim thay";  
+	}
     return 0;
 }
