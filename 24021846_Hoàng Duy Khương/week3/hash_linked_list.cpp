@@ -10,8 +10,12 @@ struct Node {
 
 Node *table[SIZE] = {NULL};
 
-int hambam(int x) {
-    return x % SIZE;
+int hambam(int x)  {
+	if(x >= 0){
+		return x % SIZE;
+	}else{
+	return -(x % SIZE);
+	}
 }
 
 void insert(int x) { //O(1)
