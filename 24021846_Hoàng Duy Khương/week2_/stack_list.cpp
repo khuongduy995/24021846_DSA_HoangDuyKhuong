@@ -8,16 +8,16 @@ private:
     list<int> stack_data;
 
 public:
-    bool isEmpty() {
+    bool isEmpty() { //O(1)
         return stack_data.size() == 0;
     }
 
-    void push(int item) {
+    void push(int item) { //O(1)
         stack_data.push_back(item);
     }
 
     int pop() {
-        if (isEmpty()) {
+        if (isEmpty()) { //O(1)
             cout << "Loi: Stack rong!";
             return -1;
         }
@@ -27,11 +27,11 @@ public:
         return value;
     }
 
-    int size() {
+    int size() { //O(1)
         return stack_data.size();
     }
 
-    int top() {
+    int top() { //O(1)
         if (isEmpty()) {
             cout << "Loi: Stack rong!";
             return -1;
