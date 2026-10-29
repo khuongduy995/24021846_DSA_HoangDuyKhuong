@@ -8,7 +8,11 @@ int table[SIZE];
 bool used[SIZE] = {false};
 
 int hashFunction(int x) {
-    return x % SIZE;
+	if(x >= 0){
+		return x % SIZE;
+	}else{
+	return -(x % SIZE);
+	}
 }
 
 void insert(int x) {
