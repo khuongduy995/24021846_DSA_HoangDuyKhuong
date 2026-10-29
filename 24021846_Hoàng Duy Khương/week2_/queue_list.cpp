@@ -45,9 +45,9 @@ int main() {
     q.enqueue(20);
     q.enqueue(30);
 
-    cout << "Phan tu o dau queue (Front): " << q.front() << endl;
+    cout << "Phan tu o dau queue: " << q.front() << endl;
 
-    cout << "Dequeue: " << q.dequeue() << endl;
+    cout << "Xoa: " << q.dequeue() << endl;
     cout << "Front sau khi dequeue: " << q.front() << endl;
     cout << "Kich thuoc queue: " << q.size() << endl;
 
