@@ -10,12 +10,12 @@ struct Node {
 
 Node *table[SIZE] = {NULL};
 
-int hashFunction(int x) {
+int hambam(int x) {
     return x % SIZE;
 }
 
-void insert(int x) {
-    int index = hashFunction(x);
+void insert(int x) { //O(1)
+    int index = hambam(x);
 
     Node *p = new Node;
     p->data = x;
@@ -24,8 +24,8 @@ void insert(int x) {
     table[index] = p;
 }
 
-bool search(int x) {
-    int index = hashFunction(x);
+bool search(int x) { //O(n)
+    int index = hambam(x);
     Node *p = table[index];
 
     while (p != NULL) {
@@ -38,7 +38,7 @@ bool search(int x) {
     return false;
 }
 
-void display() {
+void display() { //O(n)
     for (int i = 0; i < SIZE; i++) {
         cout << i << ": ";
 
