@@ -21,3 +21,12 @@ void merge(int arr[], int l, int mid, int r){
     }
     delete[] b; delete[] c;
 }
+
+void Sort(int arr[], int l, int r){ 
+    if (r<=l) return;
+    int mid=(l+r)/2;
+    Sort(arr, l, mid); 
+    Sort(arr, mid+1, r); 
+    merge(arr, l, mid, r); 
+}
+
