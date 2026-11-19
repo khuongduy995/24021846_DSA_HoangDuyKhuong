@@ -4,7 +4,7 @@
 using namespace std;
 
 struct Symbol {
-    char name[50];
+    char name[100];
     char type[20];
     Symbol* next;
 };
