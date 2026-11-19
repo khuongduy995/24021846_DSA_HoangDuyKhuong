@@ -115,32 +115,4 @@ public:
     }
 };
 
-int main() {
-
-    SymbolTable st;
-
-    st.insert("age", "int");
-    st.insert("score", "float");
-    st.insert("name", "char");
-
-    cout << "Symbol Table ban dau:";
-    st.display();
-
-    Symbol* p = st.lookup("score");
-
-    if (p != NULL) {
-        cout << "\nTim thay: "
-             << p->name << " - " << p->type << endl;
-    }
-    else {
-        cout << "\nKhong tim thay!\n";
-    }
-
-    st.remove("age");
-
-    cout << "\nSymbol Table sau khi xoa age:";
-    st.display();
-
-    return 0;
-}
 
